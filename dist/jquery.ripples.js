@@ -359,23 +359,26 @@ Ripples.prototype = {
 		}
 
 		function dropAtPointer(pointer, big) {
-			if (pointerEventsEnabled()) {
+			console.log("You are here");
+			/*if (pointerEventsEnabled()) {*/
+				
 				that.dropAtPointer(
 					pointer,
 					that.dropRadius * (big ? 1.5 : 1),
 					(big ? 0.14 : 0.01)
 				);
-			}
+			/*}*/
 		}
 
 		// Start listening to pointer events
-		this.$el
+		/*this.$el
 
 			// Create regular, small ripples for mouse move and touch events...
 			.on('mousemove.ripples', function(e) {
 				dropAtPointer(e);
 			})
-			.on('touchmove.ripples, touchstart.ripples', function(e) {
+			
+			.on('touchstart.ripples', function(e) {
 				var touches = e.originalEvent.changedTouches;
 				for (var i = 0; i < touches.length; i++) {
 					dropAtPointer(touches[i]);
@@ -386,6 +389,7 @@ Ripples.prototype = {
 			.on('mousedown.ripples', function(e) {
 				dropAtPointer(e, true);
 			});
+			*/
 	},
 
 	// Load the image either from the options or the element's CSS rules.
@@ -742,7 +746,7 @@ Ripples.prototype = {
 		this.originalInlineCss = inlineCss;
 
 		this.originalCssBackgroundImage = this.$el.css('backgroundImage');
-		this.$el.css('backgroundImage', 'none');
+		/*this.$el.css('backgroundImage', 'none');*/
 	},
 
 	restoreCssBackground: function() {
