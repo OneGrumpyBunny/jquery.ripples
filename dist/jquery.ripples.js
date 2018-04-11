@@ -359,15 +359,15 @@ Ripples.prototype = {
 		}
 
 		function dropAtPointer(pointer, big) {
-			console.log("You are here");
-			/*if (pointerEventsEnabled()) {*/
+			
+			if (pointerEventsEnabled()) {
 				
 				that.dropAtPointer(
 					pointer,
 					that.dropRadius * (big ? 1.5 : 1),
 					(big ? 0.14 : 0.01)
 				);
-			/*}*/
+			}
 		}
 
 		// Start listening to pointer events
@@ -432,8 +432,11 @@ Ripples.prototype = {
 			gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, wrapping);
 			gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
 
+			/*that.backgroundWidth = image.width;
+			that.backgroundHeight = image.height;*/
 			that.backgroundWidth = image.width;
 			that.backgroundHeight = image.height;
+			
 
 			// Hide the background that we're replacing.
 			that.hideCssBackground();
@@ -580,7 +583,7 @@ Ripples.prototype = {
 				}
 			}
 		}
-
+		
 		// Compute backgroundX and backgroundY in page coordinates
 		var backgroundX = backgroundPosition[0];
 		var backgroundY = backgroundPosition[1];
@@ -616,6 +619,7 @@ Ripples.prototype = {
 			this.canvas.width / maxSide,
 			this.canvas.height / maxSide
 		]);
+		
 	},
 
 	initShaders: function() {
