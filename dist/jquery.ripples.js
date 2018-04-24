@@ -436,7 +436,7 @@ Ripples.prototype = {
 			that.backgroundHeight = image.height;*/
 			that.backgroundWidth = image.width;
 			that.backgroundHeight = image.height;
-			
+
 
 			// Hide the background that we're replacing.
 			that.hideCssBackground();
@@ -523,6 +523,8 @@ Ripples.prototype = {
 		var backgroundAttachment = this.$el.css('background-attachment');
 		var backgroundPosition = translateBackgroundPosition(this.$el.css('background-position'));
 
+		//console.log("bg size: " + backgroundSize + " | bg attachment " + backgroundAttachment + " | bg position " + backgroundPosition);
+
 		// Here the 'container' is the element which the background adapts to
 		// (either the chrome window or some element, depending on attachment)
 		var container;
@@ -583,7 +585,8 @@ Ripples.prototype = {
 				}
 			}
 		}
-		
+		//console.log ("bg width " + backgroundWidth + " | bg height " + backgroundHeight);
+
 		// Compute backgroundX and backgroundY in page coordinates
 		var backgroundX = backgroundPosition[0];
 		var backgroundY = backgroundPosition[1];
