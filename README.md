@@ -5,7 +5,7 @@ By the powers of WebGL, add a layer of water to your HTML elements which will ri
 
 Important: this plugin requires the WebGL extension `OES_texture_float` (and `OES_texture_float_linear` for a better effect) and works only with same-origin images (see [this link](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) for more information on using cross-origin requested images).
 
-Click [here](http://cherylvelez.com/jquery.ripples/demo/index.html) for a demo and to see how to use it.
+Click [here](http://cherylvelez.com/waterpuddle/demo/index.html) for a demo and to see how to use it.
 
 Usage
 -----
